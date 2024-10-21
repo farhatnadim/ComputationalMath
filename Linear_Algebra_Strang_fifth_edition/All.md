@@ -18,5 +18,6 @@ Find the dimensions of these 4 spaces . Which two of the spaces are the same ? (
 $A = \begin{bmatrix} 1 & 1 & 0  \\ 1 & 3 & 1 \\ 3 & 1 & -1   \end{bmatrix}$ and $U = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2  & 1 \\ 0 & 0 & 0\end{bmatrix}$
 #### Solution
 The column spaces and row space both have dimension = 2 because they are made from a minimum number of 2 independents vectors. 
-The column space of U is different than the column space of A becasue if you notice there we cannot write the the first column of A with any combination of the columns of U ( third element is zero )
+The column space of U is different than the column space of A;
+ if you notice there we cannot write the the first column of A with any combination of the columns of U ( third element is zero )
 The row spaces are the same though because they can be written as a linear combination of each others
