@@ -1,4 +1,9 @@
 import sympy as sp 
 
 A = sp.Matrix([[1, 1,0], [1, 3, 1], [3, 1, -1]])
-print(A.LUdecomposition_Simple())
+U = sp.Matrix([[1,1,0],[0,2,1],[0,0,0]])
+
+A[1,:] = A[1,:] - A[0,:]
+A[2,:] = A[2,:] - 3 * A[0,:]
+A[2,:] = A[2,:] + A[1,:]
+print(A)
