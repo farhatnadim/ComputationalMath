@@ -4,7 +4,17 @@
 
 Proposition : is a statement that is either true or false. 
 
-Implication :  P -> Q has the truth table P = P Q . 
+Implication :  $ P \rightarrow Q $ has the truth table $P = P \land Q $. Implication is by itself another proposition 
+the truth table is latex is as below.  
+  
+$ \begin{array}{|c|c|c|}
+P & Q & P \rightarrow Q \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & T \\
+F & F & T \\
+\end{array} $
 
 ## Lean 
 
