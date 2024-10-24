@@ -17,21 +17,25 @@ False : The zero vector is always in the row space of any matrix.
 Find the dimensions of these 4 spaces . Which two of the spaces are the same ? (a) The column space of A (b) The column space of U (c) The row space of A (d) The row space of U.  
 $A = \begin{bmatrix} 1 & 1 & 0  \\ 1 & 3 & 1 \\ 3 & 1 & -1   \end{bmatrix}$ and $U = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2  & 1 \\ 0 & 0 & 0\end{bmatrix}$
 #### Solution
-The column spaces and row space for both A and U  have dimension = 2  . for the column space of the Matrix A, the first vector is a combination of the first two . 
-$\vec{c_1} = \vec{c_2} - 2*\vec{c_3}$.  and $\vec{c_2} ,\vec{c_3}$ are independent.   
-THe columns space  
-The column space of U is different than the column space of A;
- if you notice there we cannot write the the first column of A with any combination of the columns of U ( third element is zero )
-The row spaces are the same though because they can be written as a linear combination of each others
+The column spaces and row space for both A and U  have dimension = 2.   
+The rref of the Matrix A  has two pivot columns that means the rank of the marix is 2 and the column space dimension is 2
+The rref of the Matrix A Transpose has two pivot columns that means the ranks of the matrix is 2 and the row space dimension is 
+We expect the same for U since U 
+
+The column space of A and U are the same , not the row spaces 
+
 #### Sympy Solution 
 ```python  
 import sympy as sp 
 
 A = sp.Matrix([[1, 1,0], [1, 3, 1], [3, 1, -1]])
 U = sp.Matrix([[1,1,0],[0,2,1],[0,0,0]])
-
-A[1,:] = A[1,:] - A[0,:]
-A[2,:] = A[2,:] - 3 * A[0,:]
-A[2,:] = A[2,:] + A[1,:]
-print(A)
+print("A Reduced Row Echelon form",A.rref())
+tr_A = A.T
+print("Transposed Reduced Row echelon form ",tr_A.rref())
+print("U Reduced Row Echelon form",U.rref())
+tr_U = U.T
+print(tr_U)
+print(tr_A)
+# True
 ```
