@@ -9,6 +9,12 @@ from past experience we know that :
 Assuming that exactly one successfull design is produced , what is the probability that is was design by team N?
 
 ### Solution
-let us reframe the question first, what is the event that one succefful design is produced given it was designed by team N . 
-now at first glance wehn you decide about the sample space that P(C) + P(N) > 1 !! of course because you need to get P(C) + P(N) - P(N and C )
-i started by looking at the sample of space of P(N)
+Let us first understand the sample space . this is most similar to throwing two coins , where heads is success and tail is failure. the sample space size is 4 . 2^2 
+
+CN  : Both teams were successfull
+C'N' : Both teams are unuccessfull 
+C'N : Conservative team is not successfull and Innovative Team is successfull
+CN' : Concervative team is successfull and  Innovative team is successfull 
+
+Now we understand the general sample space. now let us understand the conditional probability .  
+Assuming that exactly one successful design is produced ( assuming one head shows up ) what is the probability that is designed by team N . 
