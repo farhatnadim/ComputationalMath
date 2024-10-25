@@ -9,3 +9,5 @@ A: The dimension of a subspace is the number of independent vectors in that spac
 Q: What does it mean for a set of vectors to span a subspace ?  
 A: A set of vectors spans a space if their linear combinations fill the space. 
 
+Q: What does it mean for two vectors spaces to be the same 
+A: Two vectors are the same if they can be written as a linear combination of each others
