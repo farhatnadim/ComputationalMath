@@ -10,17 +10,17 @@ Proof : a proof is a method to ascertain the truth of a proposition. a proof is 
 
 
 Implication : is a fundamental inference rule. a Proof of P taken together P implies Q is a proof of Q  
-$ P \rightarrow Q $ has the truth table $P = P \land Q $. 
+$P \rightarrow Q$ has the truth table $P = P \land Q$. 
 the implication truth table is as below.  and you can that if P is true and P implies Q is true, then Q is true. 
   
-$ \begin{array}{|c|c|c|}
+$\begin{array}{|c|c|c|}
 P & Q & P \rightarrow Q \\
 \hline
 T & T & T \\
 T & F & F \\
 F & T & T \\
 F & F & T \\
-\end{array} $
+\end{array}$
 
 ## Lean 
 
@@ -30,7 +30,7 @@ in Lean, we can define a proposition as a type.
 P : Prop -- P is a proposition
 #check(P) -- Prop
 ```
-a hypothesis of a proposition is an element of the proposition type. 
+a hypothesis or proof  of a proposition is an element of the proposition type, when we used the `exact` keyword as if we are saying that  we provided that proof hP that the proposition is true, so lean closes the proof
 
 ```lean
 example( hP : P) : P := by -- hp is a proof of P
@@ -44,3 +44,18 @@ The implication which is also a proposition can be defined as below.
 P → Q -- P implies Q
 #check(P → Q) -- Prop
 ```
+
+let us do two exercies with implication also by introducing the `intro` keyword. 
+
+Exercise 1 : Assume we know that Q is true. We want to prove the P -> Q is true . From the definition of implication above for P-> Q to be true we need Q true and P true hence the intro keyword which introduce the proposition that p is true and then we use exact to close the argument
+
+```lean
+-- Assume `Q` is true. Prove that `P → Q`.
+example (hQ : Q) : P → Q := by
+  -- The goal is of the form `X → Y` so we can use `intro`
+  intro h
+  -- now `h` is the hypothesis that `P` is true.
+  -- Our goal is now the same as a hypothesis so we can use `exact`
+  exact hQ
+```
+Exercises 2 : 
