@@ -45,9 +45,9 @@ P → Q -- P implies Q
 #check(P → Q) -- Prop
 ```
 
-let us do two exercies with implication also by introducing the `intro` keyword. 
+let us do two exercies with implication also by introducing the `intro` and the `apply` keyword. 
 
-Exercise 1 : Assume we know that Q is true. We want to prove the P -> Q is true . From the definition of implication above for P-> Q to be true we need Q true and P true hence the intro keyword which introduce the proposition that p is true and then we use exact to close the argument
+Exercise 1 : Assume we know that Q is true. We want to prove the P -> Q is true . From the definition of implication above for P-> Q to be true we need Q true and P true hence the intro keyword which introduces the proposition that P is true and then we use exact to close the argument
 
 ```lean
 -- Assume `Q` is true. Prove that `P → Q`.
@@ -58,4 +58,13 @@ example (hQ : Q) : P → Q := by
   -- Our goal is now the same as a hypothesis so we can use `exact`
   exact hQ
 ```
-Exercises 2 : 
+Exercises 2 : Assume  P -> Q is true and P is true deduce that Q is true. `apply` is get when P is true using the implication P -> Q we can deduce that Q is true. 
+
+
+```lean
+example ( h : P → Q) ( hP : P) : Q := by
+  -- The goal is `Q` so we can use `apply`
+  apply h
+  -- The goal is now `P` so we can use `exact`
+  exact hP
+```
