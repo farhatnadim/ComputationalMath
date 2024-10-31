@@ -9,12 +9,23 @@ from past experience we know that :
 Assuming that exactly one successfull design is produced , what is the probability that is was design by team N?
 
 ### Solution
-Let us first understand the sample space . this is most similar to throwing two coins , where heads is success and tail is failure. the sample space size is 4 . 2^2 
+Let us first understand the problem, by highlighting the explicit problem statement 
 
-CN  : Both teams were successfull
-C'N' : Both teams are unuccessfull 
-C'N : Conservative team is not successfull and Innovative Team is successfull
-CN' : Concervative team is successfull and  Innovative team is successfull 
+are asked to design a product : both teams are asked. 
+One of the outcomes is success : 
+Seperatly : means outcomes of Team A is indepdent from that outcome of Team B . 
+
+Second Let us read the problem statement to see what is needed 
+
+Team C is successfull is 2/3 : there are two possibility that team C was successfull and Team N (CN) not successful or Team C was susccessful and Team N was successful (CN')
+
+P(CN) + P(CN') = 2/3
+
+
+CN  : Both teams were successfull  ( H H ).
+C'N' : Both teams are unsuccessfull  ( T T ).
+C'N : Conservative team is not successfull and Innovative Team is successfull ( H T )
+CN' : Concervative team is successfull and  Innovative team is successfull  ( T H )
 
 Now we understand the general sample space. now let us understand the conditional probability .  
 Assuming that exactly one successful design is produced ( assuming one head shows up ) what is the probability that is designed by team N . so we are looking the probability where team N successed and the other team fail P(C'N)
