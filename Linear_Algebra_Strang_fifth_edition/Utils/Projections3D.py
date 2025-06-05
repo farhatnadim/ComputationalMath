@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
 from mpl_toolkits.mplot3d import Axes3D # For 3D plotting
-matplotlib.use('TkAgg') # Or 'Qt5Agg', 'GTK3Agg', 'WXAgg'
+matplotlib.use('qtAgg') # Or 'Qt5Agg', 'GTK3Agg', 'WXAgg'
 # Define the orthogonal basis vectors for the plane (column space)
 a1 = np.array([1, 0, 1])
 a2 = np.array([0, 1, 0]) # a1 and a2 are orthogonal
