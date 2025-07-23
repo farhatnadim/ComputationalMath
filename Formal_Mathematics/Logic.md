@@ -1,7 +1,6 @@
 # Logic
 
 ## Terms and Definitions
-
 Proposition : is a statement that is either true or false.  
 Axiom : is a statement that is assumed to be true.  
 logical deductions(inference rules) : are used to prove new propostions using previously proved one  
